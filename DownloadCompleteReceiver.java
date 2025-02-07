@@ -12,7 +12,7 @@ public class DownloadCompleteReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
             long downloadId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
-            // Notify user or handle download completion logic here
+           
             Toast.makeText(context, "Download complete!", Toast.LENGTH_SHORT).show();
         }
     }
