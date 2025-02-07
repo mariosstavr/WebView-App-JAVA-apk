@@ -10,7 +10,7 @@ public class MyShortcutReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         if ("com.example.mywebsite.SHORTCUT".equals(action)) {
-            // Handle the shortcut action here
+            
             Toast.makeText(context, "Shortcut clicked!", Toast.LENGTH_SHORT).show();
         }
     }
