@@ -115,14 +115,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Enable WebView debugging for development purposes
+        
         WebView.setWebContentsDebuggingEnabled(true);
 
-        // Load a URL into the WebView (replace with your desired URL)
-        myWeb.loadUrl("https://yourwebsite.com/"); // Ensure no sensitive URLs are directly in code
+        
+        myWeb.loadUrl("https://yourwebsite.com/"); 
     }
 
-    // Handle file upload result
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -148,13 +148,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (myWeb.canGoBack()) {
-            myWeb.goBack(); // Go back to the previous page
+            myWeb.goBack(); 
         } else {
-            super.onBackPressed(); // Close the app if no page to go back to
+            super.onBackPressed(); 
         }
     }
 
-    // Handle permission result
+   
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Custom file download method if needed (alternative to DownloadManager)
+    
     private void downloadFile(String url, String fileName) {
         new Thread(() -> {
             try {
@@ -179,15 +179,15 @@ public class MainActivity extends AppCompatActivity {
                 connection.setDoInput(true);
                 connection.connect();
 
-                // Check if the connection was successful
+                
                 if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    // Get the input stream
+                    
                     InputStream inputStream = connection.getInputStream();
 
-                    // Create file in external storage
+                   
                     File file = new File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), fileName);
 
-                    // Write the input stream to file
+                   
                     FileOutputStream fileOutputStream = new FileOutputStream(file);
                     byte[] buffer = new byte[1024];
                     int len;
