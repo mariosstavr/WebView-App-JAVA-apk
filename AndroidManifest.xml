@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWebsite">
 
-        <!-- Main Activity -->
+        
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Register the MyShortcutReceiver -->
+      
         <receiver
             android:name=".DownloadCompleteReceiver"
             android:enabled="true"
@@ -41,7 +41,7 @@
 
     </application>
 
-    <!-- Request necessary permissions -->
+    
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
