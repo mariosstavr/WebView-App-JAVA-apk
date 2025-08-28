@@ -1,23 +1,16 @@
-WebView Integration:
+An Android app that wraps a website in a WebView, enabling file uploads, camera access, and downloads.
+Communicates with a Node.js backend over HTTP/S, supporting file uploads and session-based requests.
 
-Loaded a website (From A URL) within an Android app using WebView.
-Enabled JavaScript and media playback support within the WebView.
-Managed SSL certificate errors for testing purposes.
+Features:
 
-File Uploads:
-Supported file uploads via WebView, including camera and file chooser permissions.
-Handled file selection and passed the file paths back to the WebView.
-File Downloads:
+File upload & camera access from the website.
 
-Integrated Android’s DownloadManager to handle file downloads.
-Allowed users to download files through the app with automatic notifications for download completion.
-Managed file destinations using external storage and handled cookies for download requests.
-Push Notifications:
+File downloads via DownloadManager with session cookies or custom HTTP download.
 
-Incorporated Firebase Cloud Messaging (FCM) for push notifications to alert users of new files or updates in their folders on OneDrive.
-Set up download listeners and provided real-time status updates for file downloads.
+Backend communication with Node.js for AJAX requests and file handling.
 
-Permissions Management:
-Handled runtime permissions for camera, file access, and storage.
-Ensured app functionality with necessary permissions for smooth file handling.
-User Authentication:
+Navigation handling, runtime permissions, and Chrome DevTools debugging.
+
+SSL testing support (production requires proper SSL validation).
+
+Tech Stack: Android (Java, WebView, DownloadManager), Node.js backend, HTTP/S with cookies and multipart/form-data.
